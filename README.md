@@ -51,7 +51,7 @@ All the samples, raw and encoded sequences, can be found at /data_sets and are e
   ```
 
 ## References
-<a id="1">[1]</a> S.  F.  Altschul,  W.  Gish,  W.  Miller,  E.  W.  Myers  and  D.  J.  Lipman,”Basic local alignment search tool.” J. Mol. Biol. 215:403-410, 1990.
+<a id="1">[1]</a> S.  F.  Altschul,  W.  Gish,  W.  Miller,  E.  W.  Myers  and  D.  J.  Lipman, ”Basic local alignment search tool.” J. Mol. Biol. 215:403-410, 1990.
 
 <a id="2">[2]</a> C.  Camacho  et  al.,  “BLAST+:  Architecture  and  applications,”  BMCBioinformatics, vol. 10, p. 421, Dec. 2009, doi: 10.1186/1471-2105-10-421.
 
