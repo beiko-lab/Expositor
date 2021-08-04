@@ -27,20 +27,10 @@ classes = ["non-promoter", "promoter"]
 encoders_to_use = [Kmers(list_of_ks=list(range(1, 6))), Pc3mer(classes=classes)]
 
 # Getting probabilities from the model
-model = EncodeAndPredictGenome(
-                                encoders_to_use=encoders_to_use,
-                                model_folder="",
-                                classes=classes,
-                                path_db=path_output,
-                                path_output=path_output,
-                                output_file="output.txt",
-                                process_line_by_line = False,
-                                min_seq_size_to_search = 58,
-                                scaler = "scaler.pkl",
-                                path_model = os.path.join(os.getcwd(),"model/"),
-                                path_db_suffix = None,
-                                path_output_suffix = None
-                              )
+model = EncodeAndPredictGenome(encoders_to_use=encoders_to_use, model_folder="", classes=classes, path_db=path_output,
+                               path_output=path_output, process_line_by_line=False, min_seq_size_to_search=58,
+                               scaler="scaler.pkl", path_model=os.path.join(os.getcwd(), "model/"), path_db_suffix=None,
+                               path_output_suffix=None)
 frag_length = 5000
 for j, i in enumerate(range(1, gen_size, frag_length)):
     dt_string = datetime.now().strftime("%Y-%m-%d %H:%M")
