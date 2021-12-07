@@ -2,6 +2,12 @@
 
 Expositor is a solution that breaks a DNA sequence into fragments using a sliding windows of 58 nucleotides, encodes them using [_pc3mer_](https://github.com/beiko-lab/DNA_encoders#pc3mer) and [_k-mers_](https://github.com/beiko-lab/DNA_encoders#k-mers), and feeds them to the classifier. The  multilayer perceptron classifier outputs the probability for each input sequence to be a promoter. The probabilities are smoothed, so a nucleotide's neighbors' probabilities impact on its probabilitiy that is filtered to limit the minimum length of the promoter predictions. As its last step, the solution outputs a list of the promoter predictions and their position in the DNA sequence.
 
+
+## Citation
+If you have used Expositor in your research, please kindly cite the following publication:
+
+M. Bernardino and R. Beiko, "Genome-scale prediction of bacterial promoters," 2021 IEEE Conference on Computational Intelligence in Bioinformatics and Computational Biology (CIBCB), 2021, pp. 01-08, doi: 10.1109/CIBCB49929.2021.9562938
+
 ## Samples used for training
 
 To train the classifier, we used the following samples:
@@ -67,7 +73,7 @@ All the samples, raw and encoded sequences, are available in /data_sets. The dif
     ```
 3. To run _Expositor_ on your data, use the following command line:
     ```
-    python expositor.py -p path_to_the_genome -gen_size number_of_nucleotides_in_the_genome
+    python expositor.py -p path_to_the_genome -l number_of_nucleotides_in_the_genome
     ```
    _Expositor_ will evaluate the genome in _path_to_the_genome_ and make predictions saving intermediate and final results in the same folder.
 
