@@ -6,6 +6,7 @@ from datetime import datetime
 import argparse
 import os
 from utils import *
+from glob import glob
 
 # Parsing arguments
 parser = argparse.ArgumentParser(description="Apply Expositor to .fna file located in the path -p")
@@ -21,6 +22,11 @@ path_output = args.p
 gen_size = args.l
 minimal_promoter_length = args.m
 store_intermediate_results = args.s
+
+# checking parameters
+assert os.path.isdir(path_output), f"{path_output} is not a directory"
+fna = glob(os.path.join(path_output,"/*.fna"))
+assert len(fna)==1, f"The directory {path_output} has {len(fna)} fna files and should have 1"
 
 # Defining variables
 classes = ["non-promoter", "promoter"]
